@@ -1,0 +1,7 @@
+# Refer to all C/Fortran routines by their name prefixed by C_
+useDynLib(BwQuant, .registration = TRUE, .fixes = "C_")  
+export(bwRT,bwCV,bwPI,bwYJ,llqr)
+import(quantreg, KernSmooth, nleqslv)
+importFrom("stats", "coef", "complete.cases", "constrOptim", "dnorm",
+             "integrate", "predict", "qnorm", "residuals", "sd")
+
